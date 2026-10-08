@@ -5,7 +5,7 @@ import java.util.List;
 /**
  * Danh mục kịch bản lỗi mà ECU mô phỏng hỗ trợ (cùng thứ tự với bảng kịch bản trong vm/ecu_engine.cpp).
  * trueCause là nguyên nhân đúng (nhãn chuẩn, đúng bằng TenNguyenNhan trong CSDL) dùng khi đo độ chính xác;
- * kịch bản 0 là xe khỏe nên không có nguyên nhân. Mô tả từng kịch bản: docs/KICH-BAN.md.
+ * kịch bản 0 là xe khỏe nên không có nguyên nhân. Mô tả từng kịch bản: docs/giao-thuc/KICH-BAN.md.
  */
 public final class ScenarioCatalog {
 

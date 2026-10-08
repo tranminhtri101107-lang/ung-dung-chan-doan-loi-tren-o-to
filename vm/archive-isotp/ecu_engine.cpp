@@ -4,11 +4,11 @@
 // Chạy:      ./ecu_engine [giao_dien=vcan0] [DTC ...]
 //   ví dụ:   ./ecu_engine vcan0 P0300 P0171      (không ghi DTC thì dùng 4 mã mặc định)
 //
-// Hỗ trợ (chi tiết ở docs/protocol.md):
+// Hỗ trợ (chi tiết ở docs/giao-thuc/protocol.md):
 //   Mode 01 - đọc dữ liệu sống, 8 PID: 04 05 0C 0D 0F 10 11 42
 //   Mode 03 - đọc DTC (nhiều DTC thì gửi nhiều khung theo ISO-TP: First Frame + Consecutive Frame)
 //   Mode 04 - xóa DTC
-// Công thức mã hóa PID lấy từ docs/BANG-DTC-PID.xlsx (đang ở trạng thái "cần xác minh" với SAE J1979).
+// Công thức mã hóa PID lấy từ docs/du-lieu/BANG-DTC-PID.xlsx (đang ở trạng thái "cần xác minh" với SAE J1979).
 
 #include <algorithm>
 #include <array>

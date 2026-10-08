@@ -3,7 +3,7 @@
    - Chi co MA va nhom he thong; mo ta, muc do, nguon de trong cho den khi Tri tra nguon SAE J2012.
    - PID: cong thuc/min/max la DE XUAT, chua doi chieu SAE J1979.
    Khi da tra nguon, cap nhat dong tuong ung va dat DaXacMinh = 1.
-   Nguon tong hop: docs/BANG-DTC-PID.xlsx
+   Nguon tong hop: docs/du-lieu/BANG-DTC-PID.xlsx
    ============================================================ */
 
 USE ChanDoanXe;

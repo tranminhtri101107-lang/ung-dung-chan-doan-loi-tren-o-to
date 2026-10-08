@@ -1,7 +1,7 @@
 ﻿/* ============================================================
    CSDL: ChanDoanXe  -  Phan mem chan doan loi o to cho xuong dich vu
    Script 01: tao co so du lieu va cac bang (SQL Server)
-   Nguon thiet ke: docs/ERD.md, docs/erd.drawio
+   Nguon thiet ke: docs/thiet-ke/ERD.md, docs/thiet-ke/erd.drawio
    Chay bang SSMS: mo file, bam Execute (F5).
    ============================================================ */
 

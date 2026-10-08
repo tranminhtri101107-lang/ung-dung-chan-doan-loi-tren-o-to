@@ -7,7 +7,7 @@
 //   - Khi có client TCP, hỏi ECU định kỳ từng PID (Mode 01) và đẩy kết quả: LIVE <pid> <byte_thô> <us>
 //   - Nhận "REQ 03" / "REQ 04" từ client, hỏi ECU rồi trả "RSP 03 ..." / "RSP 04 OK"
 //   - Ghép các khung ISO-TP (First Frame + Consecutive Frame) và gửi Flow Control cho ECU
-// Giao thức đầy đủ: docs/protocol.md.
+// Giao thức đầy đủ: docs/giao-thuc/protocol.md.
 //
 // Thiết kế: một luồng, vòng lặp select() chờ đồng thời socket CAN, socket lắng nghe và client TCP.
 // Tại một thời điểm chỉ có một yêu cầu CAN đang chờ phản hồi (xem struct Pending).

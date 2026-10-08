@@ -1,5 +1,5 @@
 /* ============================================================
-   Script 07: nap chu ky bao duong (docs/CHU-KY-BAO-DUONG.md).
+   Script 07: nap chu ky bao duong (docs/du-lieu/CHU-KY-BAO-DUONG.md).
    Nguon: cac cap bao duong dinh ky cua Toyota Viet Nam (toyota.com.vn), truy cap 07/10/2026.
    Chay lai nhieu lan khong loi: chi them hang muc chua co, khong ghi de chu ky da sua trong ung dung.
    ============================================================ */

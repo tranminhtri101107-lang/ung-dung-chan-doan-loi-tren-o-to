@@ -9,7 +9,7 @@ Ngày truy cập tất cả nguồn: 06/10/2026. Không có tài liệu SAE J197
 - **W1** Wikipedia, "OBD-II PIDs", mục Service 01 - Show current data, https://en.wikipedia.org/wiki/OBD-II_PIDs (bảng PID, công thức, min, max, đơn vị; bài này trích lại SAE J1979).
 - **P1** Mã nguồn thư viện python-OBD, `obd/commands.py`, `obd/decoders.py`, `obd/UnitsAndScaling.py` (https://github.com/brendan-w/python-OBD): khai báo lệnh, hàm giải mã và hệ số tỉ lệ của từng PID (UAS theo SAE J1979).
 - **P2** Mã nguồn python-OBD, `obd/codes.py`: tên 12 DTC (từ các định nghĩa DTC chuẩn).
-- **T1** Tiêu đề và nội dung các trang kỹ thuật: apextechnation.com (P0171, P0172, P0300, P0301, P0113, P0118, P0335, P0420, P0500), icarsoft-us.com (P0117, P0217, P0562); địa chỉ đầy đủ ở `docs/LUAT-CHAN-DOAN.md`.
+- **T1** Tiêu đề và nội dung các trang kỹ thuật: apextechnation.com (P0171, P0172, P0300, P0301, P0113, P0118, P0335, P0420, P0500), icarsoft-us.com (P0117, P0217, P0562); địa chỉ đầy đủ ở `docs/du-lieu/LUAT-CHAN-DOAN.md`.
 
 ## 8 PID
 Công thức trong Excel: tất cả giống hệt W1. Với P1: PID 0x04, 0x11 dùng `v * 100.0 / 255.0` (bằng A/2.55 của W1, bằng 100/255 × A của Excel); 0x05, 0x0F dùng `v - 40`; 0x0C dùng UAS 0x07 hệ số 0,25 (bằng (256A+B)/4); 0x0D dùng UAS 0x09 hệ số 1; 0x10 dùng UAS 0x27 hệ số 0,01 (bằng (256A+B)/100); 0x42 dùng UAS 0x0B hệ số 0,001 (bằng (256A+B)/1000).
@@ -49,7 +49,7 @@ Tên gốc (tiếng Anh) trong Excel so với P2 và T1:
 
 Không có mâu thuẫn về ý nghĩa. Khác biệt chỉ là các nguồn rút gọn "Bank 1" hoặc "Sensor 1"; tên đầy đủ trong Excel là cách viết đầy đủ của định nghĩa chuẩn nên **giữ nguyên Excel**.
 
-Đề xuất: 12 DTC đặt `DaXacMinh = 1`, cột `Nguon` ghi "python-OBD codes.py; apextechnation/icarsoft-us (xem docs/DOI-CHIEU-NGUON.md); truy cập 06/10/2026".
+Đề xuất: 12 DTC đặt `DaXacMinh = 1`, cột `Nguon` ghi "python-OBD codes.py; apextechnation/icarsoft-us (xem docs/du-lieu/DOI-CHIEU-NGUON.md); truy cập 06/10/2026".
 
 **Việc còn mở (không thể làm bằng nguồn thứ cấp):**
 - **Mô tả tiếng Việt** do tác giả dịch; **mức độ nghiêm trọng** do tác giả đề xuất (nhẹ/trung bình/nghiêm trọng, ánh xạ sang Thông tin/Cảnh báo/Nghiêm trọng): SAE không quy định, không có nguồn để đối chiếu. Báo cáo đã nêu rõ.

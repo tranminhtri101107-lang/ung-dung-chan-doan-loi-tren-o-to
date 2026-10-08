@@ -17,18 +17,9 @@ lab-can-bus/logger
 lab-can-bus/temp_node
 *.o
 
-# Đề cương, báo cáo và tài liệu cá nhân (không đưa lên repo)
-docs/bao-cao/
-docs/*.docx
-docs/*.pdf
-docs/DE-CUONG-CHINH-SUA.md
-docs/KE-HOACH.md
-docs/HO-SO-DU-AN.md
-docs/HOI-DAP-BAO-VE.md
-
 # File tạm của Office
 ~$*
 
-# Ghi chu lam viec noi bo va phieu chan doan xuat ra khi chay thu
+# Ghi chú làm việc nội bộ và phiếu chẩn đoán xuất ra khi chạy thử
 CLAUDE.md
 PhieuChanDoan_*.html

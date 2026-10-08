@@ -1,6 +1,6 @@
 # Bộ luật chẩn đoán (nạp vào CSDL bằng `sql/05_seed_luat.sql`)
 
-> Sinh tự động bởi `docs/bao-cao/tools/sinh-luat.ps1`; muốn sửa luật thì sửa trong file đó rồi chạy lại. Nạp vào CSDL bằng `sql/05_seed_luat.sql`.
+> Sinh tự động bởi `tools/sinh-luat.ps1`; muốn sửa luật thì sửa trong file đó rồi chạy lại. Nạp vào CSDL bằng `sql/05_seed_luat.sql`.
 
 ## 1. Cách đọc
 

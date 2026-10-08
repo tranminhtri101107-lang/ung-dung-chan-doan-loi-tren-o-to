@@ -1,4 +1,4 @@
-﻿/* Script 04: cap nhat DTC va PID tu docs/BANG-DTC-PID.xlsx (sinh tu dong, chay lai duoc).
+﻿/* Script 04: cap nhat DTC va PID tu docs/du-lieu/BANG-DTC-PID.xlsx (sinh tu dong, chay lai duoc).
    MucDo: Nghiem trong -> CRITICAL, Trung binh -> WARNING, Nhe -> INFO, 'Nhe / Trung binh' -> WARNING.
    DaXacMinh = 1 chi khi cot Trang thai trong Excel la 'Da xac minh'. */
 USE ChanDoanXe;

@@ -2,7 +2,7 @@ package service;
 
 /**
  * Đổi byte thô của PID (Mode 01) sang giá trị vật lý. A và B là byte dữ liệu thứ nhất và thứ hai.
- * Công thức lấy từ docs/BANG-DTC-PID.xlsx (đang ở trạng thái "cần xác minh" với SAE J1979);
+ * Công thức lấy từ docs/du-lieu/BANG-DTC-PID.xlsx (đang ở trạng thái "cần xác minh" với SAE J1979);
  * khớp với công thức mà ECU giả lập dùng để mã hóa.
  */
 public final class PidDecoder {

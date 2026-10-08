@@ -1,7 +1,7 @@
 # ERD — CSDL phần mềm chẩn đoán lỗi cho xưởng
 
 > Suy ra từ use-case UC01-UC11 (`USE-CASE.md`).
-> Sơ đồ: `erd.drawio` (mở bằng draw.io). Script SQL Server: `../sql/01_tao_bang.sql` (tạo CSDL `ChanDoanXe` và 13 bảng), `../sql/02_seed_chua_xac_minh.sql` (nạp 12 DTC và 8 PID, tất cả đặt `DaXacMinh = 0`).
+> Sơ đồ: `erd.drawio` (mở bằng draw.io). Script SQL Server: `../../sql/01_tao_bang.sql` (tạo CSDL `ChanDoanXe` và 13 bảng), `../../sql/02_seed_chua_xac_minh.sql` (nạp 12 DTC và 8 PID, tất cả đặt `DaXacMinh = 0`).
 
 ## 1. Các thực thể và thuộc tính
 

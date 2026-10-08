@@ -31,7 +31,7 @@ Bit 15-14: hệ (P=0, C=1, B=2, U=3). Bit 13-12: chữ số thứ hai (0-3). Ba 
 | Gateway chọn kịch bản k cho ECU | `0x6F0` | `[02 01 k]` |
 | ECU xác nhận | `0x6F8` | `[03 01 k trạng_thái]` (0 = đã áp dụng, 1 = kịch bản không có) |
 
-Kịch bản 0 là xe khỏe, 1 đến 8 là các kịch bản lỗi (docs/KICH-BAN.md). Mỗi kịch bản đặt lại danh sách DTC (tối đa 2) và độ lệch dữ liệu sống.
+Kịch bản 0 là xe khỏe, 1 đến 8 là các kịch bản lỗi (docs/giao-thuc/KICH-BAN.md). Mỗi kịch bản đặt lại danh sách DTC (tối đa 2) và độ lệch dữ liệu sống.
 
 ### Giới hạn số DTC (không dùng ISO-TP)
 Phản hồi Mode 03 dài `2 + 2N` byte (N là số DTC). Một khung CAN chứa tối đa 7 byte dữ liệu (byte đầu là độ dài), nên **mỗi lần đọc chỉ trả tối đa 2 DTC** (6 byte), luôn nằm gọn trong một khung đơn. ECU từ chối khởi động nếu được cấu hình quá 2 DTC. Quyết định 06/10/2026: không cài ISO-TP (First/Consecutive Frame, Flow Control); bản có ISO-TP đã kiểm thử đạt được lưu ở `vm/archive-isotp/`.

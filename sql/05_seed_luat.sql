@@ -1,7 +1,7 @@
 ﻿/* ============================================================
    Script 05: nap bo luat chan doan (NguyenNhan, Luat, DieuKienLuat).
-   SINH TU DONG boi docs/bao-cao/tools/sinh-luat.ps1 - KHONG SUA TAY, sua file do roi chay lai.
-   Noi dung, nguon va uoc luong diem tin cay: docs/LUAT-CHAN-DOAN.md.
+   SINH TU DONG boi tools/sinh-luat.ps1 - KHONG SUA TAY, sua file do roi chay lai.
+   Noi dung, nguon va uoc luong diem tin cay: docs/du-lieu/LUAT-CHAN-DOAN.md.
    Chay lai nhieu lan khong loi (kiem tra ton tai truoc khi them).
    ============================================================ */
 
@@ -37,40 +37,40 @@ GO
 INSERT INTO dbo.Luat (MaNN, DiemTinCay, MoTa, Nguon)
 SELECT n.MaNN, v.Diem, v.MoTa, v.Nguon
 FROM (VALUES
-    (N'Rò rỉ chân không hoặc khí lọt vào đường nạp', CAST(0.45 AS DECIMAL(4,3)), N'R01: Rò chân không là nguyên nhân thường gặp số 1 của P0171', N'S1;S10 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Rò rỉ chân không hoặc khí lọt vào đường nạp', CAST(0.75 AS DECIMAL(4,3)), N'R02: P0171 kèm cầm chừng (bướm ga dưới 12 %) mà vòng tua cao hơn 1100: khớp mô tả "cầm chừng cao/không đều" của rò chân không', N'S10 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Rò rỉ chân không hoặc khí lọt vào đường nạp', CAST(0.3 AS DECIMAL(4,3)), N'R03: Rò chân không là nguyên nhân thường gặp số 2 của P0300', N'S2 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến MAF sai lệch (bẩn hoặc hỏng)', CAST(0.3 AS DECIMAL(4,3)), N'R04: MAF bẩn là nguyên nhân thường gặp số 2 của P0171', N'S1;S10 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến MAF sai lệch (bẩn hoặc hỏng)', CAST(0.7 AS DECIMAL(4,3)), N'R05: P0171 kèm cầm chừng mà lưu lượng MAF dưới 1,8 g/s: MAF báo thiếu lưu lượng so với cầm chừng bình thường', N'S10 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến MAF sai lệch (bẩn hoặc hỏng)', CAST(0.2 AS DECIMAL(4,3)), N'R06: MAF báo dư lưu lượng là nguyên nhân thường gặp số 3 của P0172', N'S4 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến MAF sai lệch (bẩn hoặc hỏng)', CAST(0.65 AS DECIMAL(4,3)), N'R07: P0172 kèm cầm chừng mà lưu lượng MAF trên 4,5 g/s: MAF báo dư lưu lượng', N'S4 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Áp suất nhiên liệu bất thường (bơm yếu, lọc tắc, bộ điều áp)', CAST(0.2 AS DECIMAL(4,3)), N'R08: Bơm yếu/lọc tắc là nguyên nhân thường gặp số 3-4 của P0171', N'S1;S10 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Áp suất nhiên liệu bất thường (bơm yếu, lọc tắc, bộ điều áp)', CAST(0.3 AS DECIMAL(4,3)), N'R09: Áp suất nhiên liệu quá cao (bộ điều áp) là nguyên nhân thường gặp số 2 của P0172', N'S4 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Áp suất nhiên liệu bất thường (bơm yếu, lọc tắc, bộ điều áp)', CAST(0.2 AS DECIMAL(4,3)), N'R10: Áp suất nhiên liệu thấp là nguyên nhân thường gặp số 3 của P0300', N'S2 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Kim phun rò rỉ hoặc bẩn', CAST(0.45 AS DECIMAL(4,3)), N'R11: Kim phun rò là nguyên nhân thường gặp số 1 của P0172', N'S4 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Kim phun rò rỉ hoặc bẩn', CAST(0.15 AS DECIMAL(4,3)), N'R12: Kim phun xy-lanh 1 bẩn/rò nằm trong danh sách nguyên nhân của P0301', N'S3 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Bugi mòn', CAST(0.45 AS DECIMAL(4,3)), N'R13: Bugi mòn là nguyên nhân thường gặp số 1 của P0300', N'S2 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Bugi mòn', CAST(0.4 AS DECIMAL(4,3)), N'R14: Bugi mòn/hỏng nằm trong danh sách nguyên nhân của P0301', N'S3 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Bobin đánh lửa hỏng', CAST(0.35 AS DECIMAL(4,3)), N'R15: Bobin (coil-on-plug) hỏng nằm trong danh sách nguyên nhân của P0301', N'S3 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến nhiệt độ nước làm mát hoặc mạch tín hiệu hỏng', CAST(0.55 AS DECIMAL(4,3)), N'R16: Cảm biến hỏng và dây/giắc là hai nguyên nhân đầu của P0117', N'S13 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến nhiệt độ nước làm mát hoặc mạch tín hiệu hỏng', CAST(0.85 AS DECIMAL(4,3)), N'R17: P0117 kèm nhiệt độ nước đọc từ 150 °C trở lên (vô lý vì mạch điện áp thấp giống nóng cực độ): lỗi cảm biến hoặc dây, không phải nóng thật', N'S14 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến nhiệt độ nước làm mát hoặc mạch tín hiệu hỏng', CAST(0.55 AS DECIMAL(4,3)), N'R18: Dây đứt, giắc ăn mòn, cảm biến hỏng là các nguyên nhân đầu của P0118', N'S8 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến nhiệt độ nước làm mát hoặc mạch tín hiệu hỏng', CAST(0.85 AS DECIMAL(4,3)), N'R19: P0118 kèm nhiệt độ nước đọc -40 °C: mạch hở, cảm biến hoặc dây', N'S8 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến nhiệt độ khí nạp hoặc mạch tín hiệu hỏng', CAST(0.55 AS DECIMAL(4,3)), N'R20: Mạch hở, giắc ăn mòn, cảm biến hỏng là các nguyên nhân đầu của P0113', N'S9 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến nhiệt độ khí nạp hoặc mạch tín hiệu hỏng', CAST(0.85 AS DECIMAL(4,3)), N'R21: P0113 kèm nhiệt độ khí nạp đọc -40 °C: mạch hở, cảm biến hoặc dây', N'S9 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Thiếu nước làm mát hoặc rò rỉ hệ thống làm mát', CAST(0.45 AS DECIMAL(4,3)), N'R22: Thiếu nước làm mát hoặc rò rỉ là nguyên nhân số 1 của P0217', N'S11 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Quạt làm mát không hoạt động', CAST(0.3 AS DECIMAL(4,3)), N'R23: Hệ thống quạt làm mát là nguyên nhân số 2 của P0217', N'S11 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Quạt làm mát không hoạt động', CAST(0.6 AS DECIMAL(4,3)), N'R24: P0217 kèm nhiệt độ nước từ 105 °C trở lên khi xe đứng yên: nhiệt độ tăng ở cầm chừng/kẹt xe là dấu hiệu nghi quạt', N'S11 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Van hằng nhiệt kẹt hoặc dòng nước làm mát bị hạn chế', CAST(0.2 AS DECIMAL(4,3)), N'R25: Van hằng nhiệt/hạn chế dòng nước là nguyên nhân số 3 của P0217', N'S11 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến vị trí trục khuỷu hoặc dây/giắc tín hiệu hỏng', CAST(0.6 AS DECIMAL(4,3)), N'R26: Cảm biến hỏng và dây/giắc là hai nguyên nhân đầu của P0335', N'S5 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến vị trí trục khuỷu hoặc dây/giắc tín hiệu hỏng', CAST(0.85 AS DECIMAL(4,3)), N'R27: P0335 kèm vòng tua đọc dưới 100: ECM không nhận được tín hiệu vòng tua', N'S5 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Bộ xúc tác xuống cấp', CAST(0.55 AS DECIMAL(4,3)), N'R28: Bộ xúc tác mòn là nguyên nhân số 1 của P0420', N'S6 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Cảm biến O2 sau xúc tác hỏng hoặc rò rỉ đường xả', CAST(0.3 AS DECIMAL(4,3)), N'R29: Rò rỉ đường xả hoặc cảm biến O2 sau hỏng nằm trong danh sách nguyên nhân của P0420', N'S6 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Mất tín hiệu tốc độ xe (cảm biến, dây dẫn hoặc liên lạc ABS)', CAST(0.6 AS DECIMAL(4,3)), N'R30: Cảm biến, dây dẫn hoặc liên lạc ABS-ECM là các nguyên nhân của P0500', N'S7 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Mất tín hiệu tốc độ xe (cảm biến, dây dẫn hoặc liên lạc ABS)', CAST(0.85 AS DECIMAL(4,3)), N'R31: P0500 kèm tốc độ đọc 0 khi bướm ga trên 40 % (đang chạy): tín hiệu tốc độ bị mất', N'S7 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Ắc quy yếu hoặc đầu cực, dây mát kém', CAST(0.45 AS DECIMAL(4,3)), N'R32: Ắc quy yếu và đầu cực/dây mát kém là hai nguyên nhân đầu của P0562', N'S12 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Hệ thống sạc hỏng (máy phát, bộ điều áp, dây đai)', CAST(0.3 AS DECIMAL(4,3)), N'R33: Máy phát, bộ điều áp, dây đai là nguyên nhân tiếp theo của P0562', N'S12 (docs/LUAT-CHAN-DOAN.md)'),
-    (N'Hệ thống sạc hỏng (máy phát, bộ điều áp, dây đai)', CAST(0.7 AS DECIMAL(4,3)), N'R34: P0562 kèm điện áp dưới 12,5 V khi động cơ đang chạy trên 1500 vòng/phút: hệ thống sạc không nâng được điện áp', N'S12 (docs/LUAT-CHAN-DOAN.md)')
+    (N'Rò rỉ chân không hoặc khí lọt vào đường nạp', CAST(0.45 AS DECIMAL(4,3)), N'R01: Rò chân không là nguyên nhân thường gặp số 1 của P0171', N'S1;S10 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Rò rỉ chân không hoặc khí lọt vào đường nạp', CAST(0.75 AS DECIMAL(4,3)), N'R02: P0171 kèm cầm chừng (bướm ga dưới 12 %) mà vòng tua cao hơn 1100: khớp mô tả "cầm chừng cao/không đều" của rò chân không', N'S10 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Rò rỉ chân không hoặc khí lọt vào đường nạp', CAST(0.3 AS DECIMAL(4,3)), N'R03: Rò chân không là nguyên nhân thường gặp số 2 của P0300', N'S2 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến MAF sai lệch (bẩn hoặc hỏng)', CAST(0.3 AS DECIMAL(4,3)), N'R04: MAF bẩn là nguyên nhân thường gặp số 2 của P0171', N'S1;S10 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến MAF sai lệch (bẩn hoặc hỏng)', CAST(0.7 AS DECIMAL(4,3)), N'R05: P0171 kèm cầm chừng mà lưu lượng MAF dưới 1,8 g/s: MAF báo thiếu lưu lượng so với cầm chừng bình thường', N'S10 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến MAF sai lệch (bẩn hoặc hỏng)', CAST(0.2 AS DECIMAL(4,3)), N'R06: MAF báo dư lưu lượng là nguyên nhân thường gặp số 3 của P0172', N'S4 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến MAF sai lệch (bẩn hoặc hỏng)', CAST(0.65 AS DECIMAL(4,3)), N'R07: P0172 kèm cầm chừng mà lưu lượng MAF trên 4,5 g/s: MAF báo dư lưu lượng', N'S4 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Áp suất nhiên liệu bất thường (bơm yếu, lọc tắc, bộ điều áp)', CAST(0.2 AS DECIMAL(4,3)), N'R08: Bơm yếu/lọc tắc là nguyên nhân thường gặp số 3-4 của P0171', N'S1;S10 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Áp suất nhiên liệu bất thường (bơm yếu, lọc tắc, bộ điều áp)', CAST(0.3 AS DECIMAL(4,3)), N'R09: Áp suất nhiên liệu quá cao (bộ điều áp) là nguyên nhân thường gặp số 2 của P0172', N'S4 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Áp suất nhiên liệu bất thường (bơm yếu, lọc tắc, bộ điều áp)', CAST(0.2 AS DECIMAL(4,3)), N'R10: Áp suất nhiên liệu thấp là nguyên nhân thường gặp số 3 của P0300', N'S2 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Kim phun rò rỉ hoặc bẩn', CAST(0.45 AS DECIMAL(4,3)), N'R11: Kim phun rò là nguyên nhân thường gặp số 1 của P0172', N'S4 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Kim phun rò rỉ hoặc bẩn', CAST(0.15 AS DECIMAL(4,3)), N'R12: Kim phun xy-lanh 1 bẩn/rò nằm trong danh sách nguyên nhân của P0301', N'S3 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Bugi mòn', CAST(0.45 AS DECIMAL(4,3)), N'R13: Bugi mòn là nguyên nhân thường gặp số 1 của P0300', N'S2 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Bugi mòn', CAST(0.4 AS DECIMAL(4,3)), N'R14: Bugi mòn/hỏng nằm trong danh sách nguyên nhân của P0301', N'S3 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Bobin đánh lửa hỏng', CAST(0.35 AS DECIMAL(4,3)), N'R15: Bobin (coil-on-plug) hỏng nằm trong danh sách nguyên nhân của P0301', N'S3 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến nhiệt độ nước làm mát hoặc mạch tín hiệu hỏng', CAST(0.55 AS DECIMAL(4,3)), N'R16: Cảm biến hỏng và dây/giắc là hai nguyên nhân đầu của P0117', N'S13 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến nhiệt độ nước làm mát hoặc mạch tín hiệu hỏng', CAST(0.85 AS DECIMAL(4,3)), N'R17: P0117 kèm nhiệt độ nước đọc từ 150 °C trở lên (vô lý vì mạch điện áp thấp giống nóng cực độ): lỗi cảm biến hoặc dây, không phải nóng thật', N'S14 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến nhiệt độ nước làm mát hoặc mạch tín hiệu hỏng', CAST(0.55 AS DECIMAL(4,3)), N'R18: Dây đứt, giắc ăn mòn, cảm biến hỏng là các nguyên nhân đầu của P0118', N'S8 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến nhiệt độ nước làm mát hoặc mạch tín hiệu hỏng', CAST(0.85 AS DECIMAL(4,3)), N'R19: P0118 kèm nhiệt độ nước đọc -40 °C: mạch hở, cảm biến hoặc dây', N'S8 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến nhiệt độ khí nạp hoặc mạch tín hiệu hỏng', CAST(0.55 AS DECIMAL(4,3)), N'R20: Mạch hở, giắc ăn mòn, cảm biến hỏng là các nguyên nhân đầu của P0113', N'S9 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến nhiệt độ khí nạp hoặc mạch tín hiệu hỏng', CAST(0.85 AS DECIMAL(4,3)), N'R21: P0113 kèm nhiệt độ khí nạp đọc -40 °C: mạch hở, cảm biến hoặc dây', N'S9 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Thiếu nước làm mát hoặc rò rỉ hệ thống làm mát', CAST(0.45 AS DECIMAL(4,3)), N'R22: Thiếu nước làm mát hoặc rò rỉ là nguyên nhân số 1 của P0217', N'S11 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Quạt làm mát không hoạt động', CAST(0.3 AS DECIMAL(4,3)), N'R23: Hệ thống quạt làm mát là nguyên nhân số 2 của P0217', N'S11 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Quạt làm mát không hoạt động', CAST(0.6 AS DECIMAL(4,3)), N'R24: P0217 kèm nhiệt độ nước từ 105 °C trở lên khi xe đứng yên: nhiệt độ tăng ở cầm chừng/kẹt xe là dấu hiệu nghi quạt', N'S11 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Van hằng nhiệt kẹt hoặc dòng nước làm mát bị hạn chế', CAST(0.2 AS DECIMAL(4,3)), N'R25: Van hằng nhiệt/hạn chế dòng nước là nguyên nhân số 3 của P0217', N'S11 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến vị trí trục khuỷu hoặc dây/giắc tín hiệu hỏng', CAST(0.6 AS DECIMAL(4,3)), N'R26: Cảm biến hỏng và dây/giắc là hai nguyên nhân đầu của P0335', N'S5 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến vị trí trục khuỷu hoặc dây/giắc tín hiệu hỏng', CAST(0.85 AS DECIMAL(4,3)), N'R27: P0335 kèm vòng tua đọc dưới 100: ECM không nhận được tín hiệu vòng tua', N'S5 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Bộ xúc tác xuống cấp', CAST(0.55 AS DECIMAL(4,3)), N'R28: Bộ xúc tác mòn là nguyên nhân số 1 của P0420', N'S6 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Cảm biến O2 sau xúc tác hỏng hoặc rò rỉ đường xả', CAST(0.3 AS DECIMAL(4,3)), N'R29: Rò rỉ đường xả hoặc cảm biến O2 sau hỏng nằm trong danh sách nguyên nhân của P0420', N'S6 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Mất tín hiệu tốc độ xe (cảm biến, dây dẫn hoặc liên lạc ABS)', CAST(0.6 AS DECIMAL(4,3)), N'R30: Cảm biến, dây dẫn hoặc liên lạc ABS-ECM là các nguyên nhân của P0500', N'S7 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Mất tín hiệu tốc độ xe (cảm biến, dây dẫn hoặc liên lạc ABS)', CAST(0.85 AS DECIMAL(4,3)), N'R31: P0500 kèm tốc độ đọc 0 khi bướm ga trên 40 % (đang chạy): tín hiệu tốc độ bị mất', N'S7 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Ắc quy yếu hoặc đầu cực, dây mát kém', CAST(0.45 AS DECIMAL(4,3)), N'R32: Ắc quy yếu và đầu cực/dây mát kém là hai nguyên nhân đầu của P0562', N'S12 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Hệ thống sạc hỏng (máy phát, bộ điều áp, dây đai)', CAST(0.3 AS DECIMAL(4,3)), N'R33: Máy phát, bộ điều áp, dây đai là nguyên nhân tiếp theo của P0562', N'S12 (docs/du-lieu/LUAT-CHAN-DOAN.md)'),
+    (N'Hệ thống sạc hỏng (máy phát, bộ điều áp, dây đai)', CAST(0.7 AS DECIMAL(4,3)), N'R34: P0562 kèm điện áp dưới 12,5 V khi động cơ đang chạy trên 1500 vòng/phút: hệ thống sạc không nâng được điện áp', N'S12 (docs/du-lieu/LUAT-CHAN-DOAN.md)')
 ) AS v(Ten, Diem, MoTa, Nguon)
 JOIN dbo.NguyenNhan n ON n.TenNguyenNhan = v.Ten
 WHERE NOT EXISTS (SELECT 1 FROM dbo.Luat l WHERE l.MoTa = v.MoTa);

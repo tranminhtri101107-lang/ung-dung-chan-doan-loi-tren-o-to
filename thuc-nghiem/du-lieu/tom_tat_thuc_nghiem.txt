@@ -1,0 +1,10 @@
+Tổng số lần chạy: 270 (kịch bản lỗi: 240, xe khỏe: 30)
+Đoán ngẫu nhiên (17 nguyên nhân): hạng 1 = 5.9%, top-3 = 17.6%
+Đoán ngẫu nhiên hạng 1 trong ứng viên của mã lỗi (trung bình): 50.4%
+Hạng 1: 204/240 = 85.0% (KTC 95% 79.9-89.0)
+Top-3 : 240/240 = 100.0% (KTC 95% 98.4-100.0)
+Chỉ dùng mã lỗi (bỏ luật PID): hạng 1 = 50.0% (KTC 43.7-56.3), top-3 = 100.0% (KTC 98.4-100.0)
+Xe khỏe có kết luận sai: 0.0% (0/30)
+Khứ hồi REQ 03 -> RSP 03 (ms): TB 1.617, độ lệch chuẩn 0.436, trung vị 1.595, P95 2.329, lớn nhất 3.640, nhỏ nhất 0.873; ngoại lai 1
+Khứ hồi INJECT (ms): TB 1.019, độ lệch chuẩn 0.254, trung vị 0.979, P95 1.555
+Thời gian suy luận (µs): TB 109.4, trung vị 71.1, P95 170.3, lớn nhất 7030.2

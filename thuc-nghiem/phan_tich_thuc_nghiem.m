@@ -1,13 +1,13 @@
 % phan_tich_thuc_nghiem.m - Phân tích kết quả thực nghiệm chẩn đoán (mục 3.4 của báo cáo).
 %
-% Đầu vào : CSV do docs/bao-cao/tools/ChayThucNghiem.java ghi ra (mỗi dòng là một lần chạy một kịch bản).
+% Đầu vào : CSV do thuc-nghiem/ChayThucNghiem.java ghi ra (mỗi dòng là một lần chạy một kịch bản).
 % Đầu ra  : 3 hình PNG và các bảng tóm tắt (CSV + văn bản) để chèn báo cáo.
 % Chạy    : matlab -batch "phan_tich_thuc_nghiem('<csv>', '<thu_muc_hinh>', '<thu_muc_tom_tat>')"
 % Không dùng Statistics Toolbox (không có trong bản cài): khoảng tin cậy Wilson tự tính, histogram vẽ bằng bar.
 
 function phan_tich_thuc_nghiem(csvFile, hinhDir, outDir)
-    if nargin < 1, csvFile = fullfile('..', 'docs', 'bao-cao', 'du-lieu', 'ket_qua_thuc_nghiem.csv'); end
-    if nargin < 2, hinhDir = fullfile('..', 'docs', 'bao-cao', 'hinh'); end
+    if nargin < 1, csvFile = fullfile('du-lieu', 'ket_qua_thuc_nghiem.csv'); end
+    if nargin < 2, hinhDir = 'ket-qua'; end
     if nargin < 3, outDir = fileparts(csvFile); end
 
     opts = detectImportOptions(csvFile, 'Encoding', 'UTF-8');

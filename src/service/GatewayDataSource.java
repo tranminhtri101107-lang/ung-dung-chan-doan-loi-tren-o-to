@@ -20,7 +20,7 @@ import model.Dtc;
 import model.LiveData;
 
 /**
- * Nguồn dữ liệu thật: nối TCP tới Gateway C++ trong máy ảo (giao thức ở docs/protocol.md).
+ * Nguồn dữ liệu thật: nối TCP tới Gateway C++ trong máy ảo (giao thức ở docs/giao-thuc/protocol.md).
  * Một luồng nền giữ kết nối (tự nối lại khi mất), đọc các dòng LIVE để cập nhật giá trị mới nhất
  * và chuyển các dòng RSP/ERR cho yêu cầu đang chờ.
  */

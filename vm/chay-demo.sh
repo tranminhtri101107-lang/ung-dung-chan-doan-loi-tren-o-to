@@ -34,4 +34,4 @@ ok=1
 pgrep -x ecu_engine >/dev/null && echo "[ĐẠT] ECU đang chạy (PID $(pgrep -x ecu_engine))" || { echo "[LỖI] ECU không chạy, xem logs/ecu.log"; ok=0; }
 pgrep -x gateway >/dev/null && echo "[ĐẠT] Gateway đang chạy (PID $(pgrep -x gateway)), cổng 5000" || { echo "[LỖI] Gateway không chạy, xem logs/gateway.log"; ok=0; }
 ip -4 addr show | grep -o 'inet [0-9.]*' | grep -v 127.0.0.1 | sed 's/inet /Địa chỉ máy ảo: /'
-[ $ok = 1 ] && echo "Sẵn sàng. Trên Windows chạy kiem-tra-demo.ps1 rồi run.bat."
+[ $ok = 1 ] && echo "Sẵn sàng. Trên Windows chạy tools\\kiem-tra-moi-truong.ps1 rồi run.bat."

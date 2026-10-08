@@ -4,12 +4,12 @@
 // Chạy:      ./ecu_engine [giao_dien=vcan0] [DTC ...]
 //   ví dụ:   ./ecu_engine vcan0 P0300 P0171      (không ghi DTC thì dùng 2 mã mặc định; tối đa 2 mã)
 //
-// Hỗ trợ (chi tiết ở docs/protocol.md):
+// Hỗ trợ (chi tiết ở docs/giao-thuc/protocol.md):
 //   Mode 01 - đọc dữ liệu sống, 8 PID: 04 05 0C 0D 0F 10 11 42
 //   Mode 03 - đọc DTC, tối đa 2 DTC mỗi lần (phản hồi nằm gọn trong một khung đơn, không dùng ISO-TP)
 //   Mode 04 - xóa DTC
 //   Tiêm lỗi: khung điều khiển 0x6F0 [02 01 k] chọn kịch bản k (0 = xe khỏe, 1..8 = các kịch bản lỗi), ECU xác nhận ở 0x6F8
-// Công thức mã hóa PID lấy từ docs/BANG-DTC-PID.xlsx (đang ở trạng thái "cần xác minh" với SAE J1979).
+// Công thức mã hóa PID lấy từ docs/du-lieu/BANG-DTC-PID.xlsx (đang ở trạng thái "cần xác minh" với SAE J1979).
 
 #include <algorithm>
 #include <array>
@@ -50,7 +50,7 @@ using Clock = std::chrono::steady_clock;
 
 // ---------- Kịch bản lỗi (tiêm lỗi) ----------
 // Mỗi kịch bản gồm tối đa 2 DTC và các độ lệch của dữ liệu sống so với xe khỏe.
-// Kịch bản 0 là xe khỏe. Nguyên nhân đúng của từng kịch bản (nhãn chuẩn) nằm ở docs/KICH-BAN.md.
+// Kịch bản 0 là xe khỏe. Nguyên nhân đúng của từng kịch bản (nhãn chuẩn) nằm ở docs/giao-thuc/KICH-BAN.md.
 constexpr double NO_VALUE = -1e9;  // "không ghi đè"
 
 struct Fault {

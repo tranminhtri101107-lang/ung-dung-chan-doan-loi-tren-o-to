@@ -41,7 +41,7 @@ Kiểm tra giải mã DTC: `03 00` = P0300, `01 71` = P0171.
 
 Mỗi lần đọc chỉ trả tối đa 2 DTC (quyết định 06/10/2026, không dùng ISO-TP). Chạy ECU với quá 2 DTC sẽ bị từ chối.
 
-Tiêm lỗi (kịch bản 0 đến 8, xem `docs/KICH-BAN.md`): `cansend vcan0 6F0#0201xx` (xx = số kịch bản dạng hex, ví dụ `6F0#020103` là kịch bản 3); ECU trả xác nhận ở `6F8`. Qua Gateway thì gõ `INJECT 3` ở cổng 5000.
+Tiêm lỗi (kịch bản 0 đến 8, xem `docs/giao-thuc/KICH-BAN.md`): `cansend vcan0 6F0#0201xx` (xx = số kịch bản dạng hex, ví dụ `6F0#020103` là kịch bản 3); ECU trả xác nhận ở `6F8`. Qua Gateway thì gõ `INJECT 3` ở cổng 5000.
 
 Chạy ECU với DTC khác: `./ecu_engine vcan0 P0217 P0118`.
 

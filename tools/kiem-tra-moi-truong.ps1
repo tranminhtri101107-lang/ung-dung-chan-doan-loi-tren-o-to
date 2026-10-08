@@ -1,8 +1,8 @@
-﻿# Kiểm tra mọi thứ cần cho buổi demo, in ĐẠT/LỖI kèm cách sửa.
-# Chạy trên Windows (PowerShell):  powershell -ExecutionPolicy Bypass -File kiem-tra-demo.ps1
+﻿# Kiểm tra môi trường trước khi chạy ứng dụng (cấu hình, JDK, SQL Server, CSDL, máy ảo, Gateway), in ĐẠT/LỖI kèm cách sửa.
+# Chạy trên Windows (PowerShell):  powershell -ExecutionPolicy Bypass -File tools\kiem-tra-moi-truong.ps1
 $ErrorActionPreference = 'Continue'
 [Console]::OutputEncoding = [Text.Encoding]::UTF8
-$root = Split-Path -Parent $MyInvocation.MyCommand.Path
+$root = Split-Path -Parent $PSScriptRoot   # thư mục gốc dự án
 $loi = 0
 function Dat($m) { Write-Host "[ĐẠT] $m" -ForegroundColor Green }
 function Loi($m, $sua) { Write-Host "[LỖI] $m" -ForegroundColor Red; if ($sua) { Write-Host "       Cách sửa: $sua" -ForegroundColor Yellow }; $script:loi++ }

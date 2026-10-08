@@ -1,0 +1,13 @@
+{
+  "java.project.sourcePaths": ["src"],
+  "java.project.outputPath": "bin",
+  "java.project.referencedLibraries": ["lib/**/*.jar"],
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-25",
+      "path": "C:\\Users\\MINHTRI\\.jdks\\openjdk-25.0.1",
+      "default": true
+    }
+  ],
+  "java.jdt.ls.java.home": "C:\\Users\\MINHTRI\\.jdks\\openjdk-25.0.1"
+}

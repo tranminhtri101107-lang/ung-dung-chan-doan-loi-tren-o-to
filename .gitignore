@@ -1,0 +1,34 @@
+# Cấu hình chứa mật khẩu cơ sở dữ liệu: chỉ đưa bản mẫu config.example.properties
+config.properties
+
+# Kết quả biên dịch Java
+bin/
+out/
+sources.txt
+*.class
+
+# File thực thi C++ (biên dịch lại bằng g++ trên máy ảo)
+vm/ecu_engine
+vm/gateway
+lab-can-bus/brake_node
+lab-can-bus/brake_node_auto
+lab-can-bus/engine_node
+lab-can-bus/logger
+lab-can-bus/temp_node
+*.o
+
+# Đề cương, báo cáo và tài liệu cá nhân (không đưa lên repo)
+docs/bao-cao/
+docs/*.docx
+docs/*.pdf
+docs/DE-CUONG-CHINH-SUA.md
+docs/KE-HOACH.md
+docs/HO-SO-DU-AN.md
+docs/HOI-DAP-BAO-VE.md
+
+# File tạm của Office
+~$*
+
+# Ghi chu lam viec noi bo va phieu chan doan xuat ra khi chay thu
+CLAUDE.md
+PhieuChanDoan_*.html

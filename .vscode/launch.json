@@ -1,0 +1,11 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Chạy ứng dụng",
+      "request": "launch",
+      "mainClass": "app.Main"
+    }
+  ]
+}

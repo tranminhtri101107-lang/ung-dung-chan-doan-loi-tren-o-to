@@ -1,0 +1,37 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor "Kỹ thuật viên" as KTV
+actor "Xe (ECU mô phỏng)" as XE
+
+rectangle "Phần mềm chẩn đoán lỗi ô tô" {
+  usecase "UC01 Quản lý hồ sơ xe" as UC01
+  usecase "UC02 Chọn xe cần chẩn đoán" as UC02
+  usecase "UC03 Kết nối với xe" as UC03
+  usecase "UC04 Xem dữ liệu sống" as UC04
+  usecase "UC05 Đọc mã lỗi (DTC)" as UC05
+  usecase "UC06 Xóa mã lỗi (DTC)" as UC06
+  usecase "UC07 Phân tích nguyên nhân" as UC07
+  usecase "UC08 Xem lịch sử theo xe" as UC08
+  usecase "UC09 Xuất kết quả" as UC09
+  usecase "UC10 Tra cứu mô tả DTC" as UC10
+}
+
+KTV --> UC01
+KTV --> UC02
+KTV --> UC04
+KTV --> UC05
+KTV --> UC06
+KTV --> UC07
+KTV --> UC08
+KTV --> UC10
+
+UC04 ..> UC03 : <<include>>
+UC05 ..> UC03 : <<include>>
+UC06 ..> UC03 : <<include>>
+UC07 ..> UC05 : <<extend>>
+UC09 ..> UC08 : <<extend>>
+
+UC03 --> XE
+@enduml

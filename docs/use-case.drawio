@@ -1,0 +1,123 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Use-case" id="usecase-1">
+    <mxGraphModel dx="1144" dy="586" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1150" pageHeight="560" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="sys" parent="1" style="rounded=1;arcSize=2;whiteSpace=wrap;html=1;fillColor=#F8FAFC;strokeColor=#5B6B7F;strokeWidth=1.5;verticalAlign=top;fontStyle=1;fontSize=15;fontColor=#1F2937;" value="Phần mềm chẩn đoán lỗi ô tô" vertex="1">
+          <mxGeometry height="490" width="795" x="190" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="kt" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=13;fontColor=#1F2937;strokeColor=#1F2937;" value="Kỹ thuật viên" vertex="1">
+          <mxGeometry height="60" width="30" x="55" y="285" as="geometry" />
+        </mxCell>
+        <mxCell id="xe" parent="1" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;fontStyle=1;fontSize=13;fontColor=#1F2937;strokeColor=#1F2937;" value="Xe (ECU mô phỏng)" vertex="1">
+          <mxGeometry height="60" width="30" x="1060" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="uc01" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC01 Quản lý hồ sơ xe" vertex="1">
+          <mxGeometry height="56" width="210" x="225" y="62" as="geometry" />
+        </mxCell>
+        <mxCell id="uc02" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC02 Chọn xe cần chẩn đoán" vertex="1">
+          <mxGeometry height="56" width="210" x="225" y="152" as="geometry" />
+        </mxCell>
+        <mxCell id="uc10" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC10 Tra cứu mô tả DTC" vertex="1">
+          <mxGeometry height="56" width="210" x="225" y="242" as="geometry" />
+        </mxCell>
+        <mxCell id="uc08" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC08 Xem lịch sử theo xe" vertex="1">
+          <mxGeometry height="56" width="210" x="225" y="332" as="geometry" />
+        </mxCell>
+        <mxCell id="uc09" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC09 Xuất kết quả" vertex="1">
+          <mxGeometry height="56" width="210" x="225" y="422" as="geometry" />
+        </mxCell>
+        <mxCell id="uc07" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC07 Phân tích nguyên nhân" vertex="1">
+          <mxGeometry height="56" width="210" x="485" y="107" as="geometry" />
+        </mxCell>
+        <mxCell id="uc05" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC05 Đọc mã lỗi (DTC)" vertex="1">
+          <mxGeometry height="56" width="210" x="485" y="197" as="geometry" />
+        </mxCell>
+        <mxCell id="uc04" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC04 Xem dữ liệu sống" vertex="1">
+          <mxGeometry height="56" width="210" x="485" y="287" as="geometry" />
+        </mxCell>
+        <mxCell id="uc06" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC06 Xóa mã lỗi (DTC)" vertex="1">
+          <mxGeometry height="56" width="210" x="485" y="467" as="geometry" />
+        </mxCell>
+        <mxCell id="uc03" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#E8F1FB;strokeColor=#2F6DB5;strokeWidth=1.5;fontColor=#1F2937;fontSize=13;" value="UC03 Kết nối với xe" vertex="1">
+          <mxGeometry height="56" width="180" x="800" y="332" as="geometry" />
+        </mxCell>
+        <mxCell id="a01" edge="1" parent="1" source="kt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.33;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc01">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="90" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a02" edge="1" parent="1" source="kt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.33;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc02">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a10" edge="1" parent="1" source="kt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.33;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc10">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="270" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a08" edge="1" parent="1" source="kt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.33;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc08">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="360" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a07" edge="1" parent="1" source="kt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.33;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc07">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="135" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a05" edge="1" parent="1" source="kt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.33;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc05">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="225" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a04" edge="1" parent="1" source="kt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.33;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc04">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="315" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a06" edge="1" parent="1" source="kt" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.33;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="uc06">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="a03" edge="1" parent="1" source="uc03" style="edgeStyle=none;html=1;endArrow=none;strokeColor=#475569;strokeWidth=1.5;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.33;entryDx=0;entryDy=0;" target="xe">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i05" edge="1" parent="1" source="uc05" style="edgeStyle=none;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#475569;strokeWidth=1.5;fontStyle=2;fontSize=11;fontColor=#475569;labelBackgroundColor=#F8FAFC;" target="uc03" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i04" edge="1" parent="1" source="uc04" style="edgeStyle=none;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#475569;strokeWidth=1.5;fontStyle=2;fontSize=11;fontColor=#475569;labelBackgroundColor=#F8FAFC;" target="uc03" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="i06" edge="1" parent="1" source="uc06" style="edgeStyle=none;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#475569;strokeWidth=1.5;fontStyle=2;fontSize=11;fontColor=#475569;labelBackgroundColor=#F8FAFC;" target="uc03" value="«include»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x07" edge="1" parent="1" source="uc07" style="edgeStyle=none;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#475569;strokeWidth=1.5;fontStyle=2;fontSize=11;fontColor=#475569;labelBackgroundColor=#F8FAFC;" target="uc05" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="x09" edge="1" parent="1" source="uc09" style="edgeStyle=none;html=1;dashed=1;endArrow=open;endFill=0;strokeColor=#475569;strokeWidth=1.5;fontStyle=2;fontSize=11;fontColor=#475569;labelBackgroundColor=#F8FAFC;" target="uc08" value="«extend»">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

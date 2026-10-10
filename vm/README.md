@@ -2,17 +2,20 @@
 
 Các file ở đây **không chạy trên Windows**. Chúng dùng SocketCAN của Linux. Soạn thảo trên Windows, chép sang máy ảo, biên dịch và chạy ở đó.
 
+## Thư mục trên máy ảo
+`~/Ung_dung_chan_doan_loi_tren_o_to` chỉ chứa những gì cần để chạy: `setup_vcan.sh`, `chay-demo.sh`, `dung-demo.sh`, `ecu_engine.cpp`, `gateway.cpp` (cùng file chạy đã biên dịch), `logs/` và `HUONG-DAN.txt`. Không phải repo git: mã nguồn sửa trên Windows rồi chép sang.
+
 ## Chép file sang máy ảo
 Mở **PowerShell** trên Windows (không phải trong VM), chạy lệnh sau. Máy ảo sẽ hỏi mật khẩu tài khoản `tranminhtri`:
 
 ```powershell
-scp "D:\Ung_dung_chan_doan_loi_tren_o_to\vm\ecu_engine.cpp" tranminhtri@192.168.35.128:~/he-thong-mo-phong-mang-CAN-Bus/
+scp "D:\Ung_dung_chan_doan_loi_tren_o_to\vm\ecu_engine.cpp" tranminhtri@192.168.35.128:~/Ung_dung_chan_doan_loi_tren_o_to/
 ```
 
 (Hoặc mở thư mục đó bằng VS Code Remote-SSH rồi kéo thả file vào.)
 
 ## Bước 1: kiểm thử ECU giả lập (`ecu_engine`)
-Cần **3 cửa sổ terminal** trong máy ảo, đều ở thư mục `~/he-thong-mo-phong-mang-CAN-Bus`.
+Cần **3 cửa sổ terminal** trong máy ảo, đều ở thư mục `~/Ung_dung_chan_doan_loi_tren_o_to`.
 
 **Terminal 1** — chuẩn bị bus ảo, biên dịch và chạy ECU:
 ```bash

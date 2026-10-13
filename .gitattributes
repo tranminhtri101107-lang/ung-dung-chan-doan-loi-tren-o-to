@@ -1,0 +1,2 @@
+# Script bash chay tren may ao Linux: luon xuong dong kieu LF, ke ca khi checkout tren Windows
+*.sh text eol=lf

@@ -33,7 +33,7 @@ ECU động cơ mô phỏng (C++)  <-- vcan0 (SocketCAN) -->  Gateway (C++)  <--
 ├─ sql/                       script CSDL, chạy theo thứ tự 01 đến 07
 ├─ vm/                        ECU mô phỏng và Gateway (C++17, Ubuntu), script bật/tắt; archive-isotp/ là bản có ISO-TP
 ├─ tests/                     chương trình kiểm thử và chay-kiem-thu.ps1
-├─ thuc-nghiem/               chạy thực nghiệm, phân tích MATLAB, số liệu (du-lieu/) và biểu đồ (ket-qua/)
+├─ thuc-nghiem/               chạy và phân tích thực nghiệm (Java), số liệu (du-lieu/) và biểu đồ (ket-qua/)
 ├─ tools/                     sinh-luat.ps1 (nguồn duy nhất của bộ luật), kiem-tra-moi-truong.ps1
 ├─ lab-can-bus/               các node CAN đầu tiên (phanh, động cơ, nhiệt độ, logger) và số liệu đo độ trễ
 └─ docs/                      tài liệu (mục lục ở docs/README.md)
@@ -50,7 +50,7 @@ ECU động cơ mô phỏng (C++)  <-- vcan0 (SocketCAN) -->  Gateway (C++)  <--
 ## Kiểm thử và thực nghiệm
 
 - `powershell -ExecutionPolicy Bypass -File tests\chay-kiem-thu.ps1` chạy kiểm thử bộ suy luận, bảo dưỡng và các quy tắc nghiệp vụ; thêm `-CoGateway` để kiểm thử đầu-cuối với máy ảo.
-- `powershell -ExecutionPolicy Bypass -File thuc-nghiem\chay-thuc-nghiem.ps1` chạy 30 lần mỗi kịch bản rồi phân tích bằng MATLAB.
+- `powershell -ExecutionPolicy Bypass -File thuc-nghiem\chay-thuc-nghiem.ps1` chạy 30 lần mỗi kịch bản rồi phân tích (tỉ lệ đúng kèm khoảng tin cậy Wilson, thống kê độ trễ, biểu đồ) bằng `PhanTichThucNghiem.java`; thêm `-ChiPhanTich` để chỉ phân tích lại số liệu đã có.
 
 Kết quả 270 lần chạy: nguyên nhân đúng ở hạng 1 là 85,0 % (204/240 lần của 8 kịch bản lỗi), so với 50,0 % khi chỉ dùng mã lỗi và 50,4 % khi đoán ngẫu nhiên trong các nguyên nhân ứng viên; đọc mã lỗi mất trung bình khoảng 1,6 ms (độ trễ phần mềm). Kết quả chỉ có ý nghĩa trong môi trường mô phỏng: bộ luật và kịch bản do cùng một tác giả soạn.
 

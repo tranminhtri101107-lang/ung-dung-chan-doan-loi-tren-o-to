@@ -213,8 +213,11 @@ public class HistoryPanel extends JPanel {
         String code = dtcFilter.getText().trim().toUpperCase(Locale.ROOT);
         shown.clear();
         for (SessionInfo s : all) {
+            // Phân tích nguyên nhân cũng đọc mã lỗi (Mode 03) nên vẫn hiện khi lọc "Đọc DTC"
+            boolean actOk = act == null || s.actions().contains(act)
+                    || (act.equals(ACTIONS[1]) && s.actions().contains(ACTIONS[3]));
             boolean ok = (from == null || !s.start().isBefore(from))
-                    && (act == null || s.actions().contains(act))
+                    && actOk
                     && (code.isEmpty() || s.dtcs().stream().anyMatch(c -> c.contains(code)));
             if (ok) {
                 shown.add(s);

@@ -17,6 +17,14 @@ ECU động cơ mô phỏng (C++)  <-- vcan0 (SocketCAN) -->  Gateway (C++)  <--
 - Giao diện kiểu máy chẩn đoán xưởng (sáng, đọc rõ trên máy chiếu), tự vẽ bằng Java2D: đồng hồ có kim, biểu đồ, icon, hiệu ứng; không thư viện ngoài ngoài FlatLaf.
 - Quản lý xe (biển số chuẩn hóa, VIN, số km, chủ xe), lịch sử theo phiên và xuất phiếu chẩn đoán HTML, nhắc bảo dưỡng theo chu kỳ (Toyota Việt Nam), tra cứu DTC kèm giải nghĩa mã và nguyên nhân từ bộ luật.
 
+## Giao diện
+
+| Chẩn đoán lỗi | Dữ liệu sống |
+|---|---|
+| ![Chẩn đoán lỗi](docs/hinh/man-hinh-chan-doan.png) | ![Dữ liệu sống](docs/hinh/man-hinh-du-lieu-song.png) |
+
+Các màn hình khác (quản lý xe, lịch sử, bảo dưỡng, tra cứu DTC) và ERD nằm ở `docs/hinh/`. Dữ liệu xe trong ảnh là dữ liệu mẫu.
+
 ## Cấu trúc thư mục
 
 ```
